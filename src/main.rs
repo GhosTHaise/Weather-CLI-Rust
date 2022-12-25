@@ -1,9 +1,10 @@
 use structopt::StructOpt;
+
 #[derive(StructOpt)] 
 //use std::env;
 struct Cli {
     city : String,
-    counrty_code  : String
+    country_code  : String
 }
 
 fn main() {
@@ -12,3 +13,4 @@ fn main() {
     //println!("Mes args : {:?}",args[1]);
     
     println!("Our city : {} , our country code : {}",args.city,args.country_code);
+}
