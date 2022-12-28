@@ -23,7 +23,7 @@ pub struct Temps {
     temp_min : f64,
     temp_max : f64,
     pressure : i32,
-    humidity : i32
+    pub humidity : i32
 }
 #[derive(Serialize,Deserialize,Debug)]
 pub struct Wind {
@@ -44,16 +44,17 @@ pub struct Sys {
 }
 #[derive(Serialize,Deserialize,Debug)]
 pub struct Forecast{
-    coord : Coord,
-    weather : Weather,
-    base : String,
-    visibility : i32,
-    wind : Wind,
-    clouds : Clouds,
-    dt : i32,
-    sys : Sys,
-    timezone : i32,
-    id : i32,
-    name : String,
-    cod : i32
+    pub coord : Coord,
+    pub weather : Weather,
+    pub base : String,
+    pub main : Temps,
+    pub visibility : i32,
+    pub wind : Wind,
+    pub clouds : Clouds,
+    pub dt : i32,
+    pub sys : Sys,
+    pub timezone : i32,
+    pub id : i32,
+    pub name : String,
+    pub cod : i32
 }
