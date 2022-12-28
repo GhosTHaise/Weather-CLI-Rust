@@ -1,5 +1,6 @@
 mod _struct;
 
+use exitfailure::ExitFailure;
 use structopt::StructOpt;
 use _struct::Structure::*;
 
@@ -10,19 +11,12 @@ struct Cli {
     country_code  : String
 }
 
-struct Forecast{
-    coord : Coord,
-    weather : Weather,
-    base : String,
-    visibility : i32,
-    wind : Wind,
-    clouds : Clouds,
-    dt : i32,
-    sys : Sys,
-    timezone : i32,
-    id : i32,
-    name : String,
-    cod : i32
+
+
+impl Forecast{
+    async fn get(city : String , country_code : String) -> Result<Self,ExitFailure> {
+            todo!()
+    }   
 }
 
 fn main() {
